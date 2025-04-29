@@ -6,7 +6,7 @@ const app = express();
 
 async function getDBConnection() {
   const connection = await mysql.createConnection({
-    host: "mysql-3fda49b8-begona-5bdb.j.aivencloud.com",
+    host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: "books_db",
