@@ -16,7 +16,7 @@ VALUES
     ('Oso', 'Marian Engel', 'Impedimenta', 5);
 
 
--- Consultas
+-- AQUÍ TERMINA EL CÓDIGO PARA GENERAR LA TABLA DE MYSQL
 
 -- Query listar todas las entradas por orden de cantidad
 SELECT * FROM books;
@@ -39,9 +39,31 @@ VALUES
     "quantity": 1
 }
 
+{
+    "title": "El acontecimiento",
+    "author": "Annie Ernaux",
+    "editor": "Andanzas",
+    "quantity": 3
+}
+
+{
+    "title": "Nada",
+    "author": "Carmen Laforet",
+    "editor": "Austral Educación",
+    "quantity": 2
+}
+
+{
+    "title": "La vegetariana",
+    "author": "Han Kang",
+    "editor": "Random House",
+    "quantity": 3
+}
+
 -- Query actualizar un campo
+
 -- La cantidad de libros ahora es 5
-UPDATE books SET quantity = 5 WHERE id = 10;
+UPDATE books SET quantity = 5 WHERE id = 5;
 
 --Query borrar una entrada
 

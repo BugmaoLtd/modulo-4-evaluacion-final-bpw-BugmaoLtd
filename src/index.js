@@ -51,8 +51,33 @@ app.post("/api/book", async (req, res) => {
     editor,
     quantity,
   ]);
-  console.log(result);
+
+  connection.end();
+
   res.status(201).json({
     success: true,
   });
 });
+
+app.put("/api/book/:id", async (req, res) => {
+  const connection = await getDBConnection();
+  const { id } = req.params;
+  const { title, author, editor, quantity } = req.body;
+  const sqlQuery3 =
+    "UPDATE books SET title = ?, author = ?, editor = ?, quantity = ? WHERE id = ?;";
+  const [result] = await connection.query(sqlQuery3, [
+    title,
+    author,
+    editor,
+    quantity,
+    id,
+  ]);
+
+  connection.end();
+
+  res.status(200).json({
+    success: true,
+  });
+});
+
+//app.delete();
