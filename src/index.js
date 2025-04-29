@@ -6,10 +6,11 @@ const app = express();
 
 async function getDBConnection() {
   const connection = await mysql.createConnection({
-    host: process.env.DB_HOST,
+    host: "mysql-3fda49b8-begona-5bdb.j.aivencloud.com",
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: "books_db",
+    port: 24757,
   });
   connection.connect();
   return connection;
@@ -31,5 +32,8 @@ app.get("/api/books", async (req, res) => {
   const [result] = await connection.query(sqlQuery);
   console.log(result);
 
-  res.json({});
+  res.status(200).json({
+    success: true,
+    result: sqlQuery,
+  });
 });
