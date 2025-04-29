@@ -19,9 +19,6 @@ VALUES
 -- AQUÍ TERMINA EL CÓDIGO PARA GENERAR LA TABLA DE MYSQL
 
 -- Query listar todas las entradas por orden de cantidad
-SELECT * FROM books;
-ORDER BY quantity ASC
-LIMIT 5;
 
 -- Query insertar una entrada
 INSERT INTO books (title, author, editor, quantity)
