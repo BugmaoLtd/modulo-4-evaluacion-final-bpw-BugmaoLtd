@@ -29,11 +29,30 @@ app.listen(port, () => {
 app.get("/api/books", async (req, res) => {
   const connection = await getDBConnection();
   const sqlQuery = "SELECT * FROM books";
-  const [result] = await connection.query(sqlQuery);
-  console.log(result);
+  const [resultList] = await connection.query(sqlQuery);
+
+  connection.end();
 
   res.status(200).json({
     success: true,
-    result: sqlQuery,
+    result: resultList,
+  });
+});
+
+app.post("/api/book", async (req, res) => {
+  const connection = await getDBConnection();
+  const { title, author, editor, quantity } = req.body;
+
+  const sqlQuery2 =
+    "INSERT INTO books (title, author, editor, quantity) VALUES(?,?,?,?) ";
+  const [result] = await connection.query(sqlQuery2, [
+    title,
+    author,
+    editor,
+    quantity,
+  ]);
+  console.log(result);
+  res.status(201).json({
+    success: true,
   });
 });

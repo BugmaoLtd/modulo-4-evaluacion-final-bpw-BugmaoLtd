@@ -31,6 +31,14 @@ VALUES
     ('Nada', 'Carmen Laforet','Austral Educación', 2),
     ('La vegetariana', 'Han Kang','Random House', 3);
 
+-- Formato para Postman
+{
+    "title": "El cuento de la criada",
+    "author": "Margaret Atwood",
+    "editor": "Salamandra Narrativa",
+    "quantity": 1
+}
+
 -- Query actualizar un campo
 -- La cantidad de libros ahora es 5
 UPDATE books SET quantity = 5 WHERE id = 10;
