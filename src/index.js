@@ -18,11 +18,9 @@ async function getDBConnection() {
 app.use(cors());
 app.use(express.json());
 
-const port = 24757;
+const port = 5001;
 app.listen(port, () => {
-  console.log(
-    `Server is listening in http://mysql-3fda49b8-begona-5bdb.j.aivencloud.com:${port}`
-  );
+  console.log(`Server is listening in http://localhost:${port}`);
 });
 
 app.get("/api/books", async (req, res) => {
