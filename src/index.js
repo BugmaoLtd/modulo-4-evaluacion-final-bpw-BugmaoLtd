@@ -41,22 +41,37 @@ app.get("/api/books", async (req, res) => {
 
 app.post("/api/book", async (req, res) => {
   const connection = await getDBConnection();
+
+  if (!req.body) {
+    res.status(404).json({
+      success: false,
+      message: "Provide all params",
+    });
+  } else {
+  }
   const { title, author, editor, quantity } = req.body;
 
-  const sqlQuery2 =
-    "INSERT INTO books (title, author, editor, quantity) VALUES(?,?,?,?) ";
-  const [result] = await connection.query(sqlQuery2, [
-    title,
-    author,
-    editor,
-    quantity,
-  ]);
+  if (!title || !author || !editor || !quantity) {
+    res.status(404).json({
+      success: false,
+      message: "Wrong params. Provide 'title', 'author', 'editor', 'quantity' ",
+    });
+  } else {
+    const sqlQuery2 =
+      "INSERT INTO books (title, author, editor, quantity) VALUES(?,?,?,?) ";
+    const [result] = await connection.query(sqlQuery2, [
+      title,
+      author,
+      editor,
+      quantity,
+    ]);
 
-  connection.end();
+    connection.end();
 
-  res.status(201).json({
-    success: true,
-  });
+    res.status(201).json({
+      success: true,
+    });
+  }
 });
 
 app.put("/api/book/:id", async (req, res) => {
