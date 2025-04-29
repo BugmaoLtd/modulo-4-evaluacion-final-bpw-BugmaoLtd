@@ -80,4 +80,16 @@ app.put("/api/book/:id", async (req, res) => {
   });
 });
 
-//app.delete();
+app.delete("/api/book/:id", async (req, res) => {
+  const connection = await getDBConnection();
+  const { id } = req.params;
+  const sqlQuery4 = "DELETE FROM books WHERE id = ?;";
+  const [result] = await connection.query(sqlQuery4, [id]);
+
+  connection.end();
+
+  res.status(200).json({
+    status: "success",
+    message: "Book removed",
+  });
+});
