@@ -47,26 +47,26 @@ Todo esto con una interfaz responsive, clara y moderna.
 🚀 Objetivos del ejercicio
 Crear una SPA con React.
 
-Usar componentes reutilizables y funcionales.
+- Usar componentes reutilizables y funcionales.
 
-Implementar enrutamiento dinámico con React Router.
+- Implementar enrutamiento dinámico con React Router.
 
-Gestionar estado con hooks (useState, useEffect).
+- Gestionar estado con hooks (useState, useEffect).
 
-Persistencia de datos en localStorage.
+- Persistencia de datos en localStorage.
 
-Consumo de datos desde una API externa.
+- Consumo de datos desde una API externa.
 
 🧠 Lecciones aprendidas
-Estructuración de proyectos React.
+- Estructuración de proyectos React.
 
-Manejo de rutas y parámetros en URLs.
+- Manejo de rutas y parámetros en URLs.
 
-Comunicación con APIs REST.
+- Comunicación con APIs REST.
 
-Control y sincronización del estado de la UI.
+- Control y sincronización del estado de la UI.
 
-Separación de lógica y presentación.
+- Separación de lógica y presentación.
 
 🖋️ Autora
 Begoña López
