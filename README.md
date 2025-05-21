@@ -30,8 +30,19 @@ Todo esto con una interfaz responsive, clara y moderna.
 1. Clona el repositorio:
    ```bash
    git clone https://github.com/BugmaoLtd/modulo-4-evaluacion-final-bpw-BugmaoLtd.git
-
-   Abre el navegador en http://localhost:3000
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/BugmaoLtd/modulo-3-evaluacion-final-BugmaoLtd.git
+2. Entra en la carpeta del proyecto:
+   ```bash
+    cd modulo-3-evaluacion-final-BugmaoLtd
+3. Instala las dependencias:
+   ```bash
+   npm install
+4. Ejecuta el proyecto con:
+    ```bash
+   npm start
+5. Abre en el navegador la dirección que se indique en la terminal (por defecto: http://localhost:3000).
 
 🚀 Objetivos del ejercicio
 Crear una SPA con React.
